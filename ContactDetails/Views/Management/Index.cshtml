@@ -7,30 +7,31 @@
 
 <h2>Index</h2>
 
-<form>
+<form method="POST">
   <fieldset>
     <legend>Contact Details</legend>
+      <br />
         <fieldset>
             <legend>Basic Information</legend>
-            First Name: <br><input type="text" size="30" id="FirstName" name="FirstName" required="required"><br>
-            Last Name: <br><input type="text" size="30"  id="LastName" name="LastName" required="required"><br>
+            @Html.LabelFor(m => m.FirstName): <br>@Html.TextBoxFor(m => m.FirstName)<br>
+            @Html.LabelFor(m => m.LastName): <br>@Html.TextBoxFor(m => m.LastName)<br>
         </fieldset>
 
         <fieldset>
             <legend>Contact Information</legend>
-                Email: <br><input type="email" size="30" id="Email" name="Email"><br>
-                Home Phone: <br><input type="number" size="10" id="HomeCountryCode" name="HomeCountryCode">&nbsp;<input type="number" size="10" id="HomeAreaCode" name="HomeAreaCode">&nbsp;<input type="number" size="10" id="HomePhoneNumber" name="HomePhoneNumber">(format:27 82 5556666)<br>
-                Cell Phone: <br><input type="number" size="10" id="CellCountryCode" name="CellCountryCode">&nbsp;<input type="number" size="10" id="CellAreaCode" name="CellAreaCode">&nbsp;<input type="number" size="10" id="CellPhoneNumber" name="CellPhoneNumber"><br><br>
+                @Html.LabelFor(m => m.Email): <br>@Html.TextBoxFor(m => m.Email)<br>
+                Home @Html.LabelFor(t => t.HomePhone.PhoneNumber): <br>@Html.TextBoxFor(t => t.HomePhone.CountryCode) &nbsp;@Html.TextBoxFor(t => t.HomePhone.AreaCode)&nbsp;@Html.TextBoxFor(t => t.HomePhone.AreaCode)<br>
+                Cell @Html.LabelFor(t => t.CellPhone.PhoneNumber): <br>@Html.TextBoxFor(t => t.CellPhone.CountryCode) &nbsp;@Html.TextBoxFor(t => t.CellPhone.AreaCode)&nbsp;@Html.TextBoxFor(t => t.CellPhone.AreaCode)<br><br>
         </fieldset>
         <fieldset>
             <legend>Address Details</legend>
-            Line 1: <br><input type="text" size="30" id="Line1" name="Line1"><br>
-            Line 2: <br><input type="text" size="30" id="Line2" name="Line2"><br>
-            Line 3: <br><input type="text" size="30" id="Line3" name="Line3"><br>
-            City: <br><input type="text" size="30" id="City" name="City"><br>
-            Province: <br><input type="text" size="30" id="Province" name="Province"><br>
-            Country: <br><input type="text" size="30" id="Country" name="Country"><br>
-            PostalCode: <br><input type="number" size="30" id="PostalCode" name="PostalCode">
+            @Html.LabelFor(a => a.HomeAddress.Line1): <br>@Html.TextBoxFor(a => a.HomeAddress.Line1)<br>
+            @Html.LabelFor(a => a.HomeAddress.Line2): <br>@Html.TextBoxFor(a => a.HomeAddress.Line2)<br>
+            @Html.LabelFor(a => a.HomeAddress.Line3): <br>@Html.TextBoxFor(a => a.HomeAddress.Line3)<br>
+            @Html.LabelFor(a => a.HomeAddress.City): <br>@Html.TextBoxFor(a => a.HomeAddress.City)<br>
+            @Html.LabelFor(a => a.HomeAddress.Province): <br>@Html.TextBoxFor(a => a.HomeAddress.Province)<br>
+            @Html.LabelFor(a => a.HomeAddress.Country): <br>@Html.TextBoxFor(a => a.HomeAddress.Country)<br>
+            @Html.LabelFor(a => a.HomeAddress.PostalCode): <br>@Html.TextBoxFor(a => a.HomeAddress.PostalCode)
         </fieldset>
       <input id="Create" type="submit" value="Create" />
   </fieldset>
