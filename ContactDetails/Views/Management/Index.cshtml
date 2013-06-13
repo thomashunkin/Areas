@@ -6,3 +6,32 @@
 }
 
 <h2>Index</h2>
+
+<form>
+  <fieldset>
+    <legend>Contact Details</legend>
+        <fieldset>
+            <legend>Basic Information</legend>
+            First Name: <br><input type="text" size="30" id="FirstName" name="FirstName" required="required"><br>
+            Last Name: <br><input type="text" size="30"  id="LastName" name="LastName" required="required"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+                Email: <br><input type="email" size="30" id="Email" name="Email"><br>
+                Home Phone: <br><input type="number" size="10" id="HomeCountryCode" name="HomeCountryCode">&nbsp;<input type="number" size="10" id="HomeAreaCode" name="HomeAreaCode">&nbsp;<input type="number" size="10" id="HomePhoneNumber" name="HomePhoneNumber">(format:27 82 5556666)<br>
+                Cell Phone: <br><input type="number" size="10" id="CellCountryCode" name="CellCountryCode">&nbsp;<input type="number" size="10" id="CellAreaCode" name="CellAreaCode">&nbsp;<input type="number" size="10" id="CellPhoneNumber" name="CellPhoneNumber"><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Address Details</legend>
+            Line 1: <br><input type="text" size="30" id="Line1" name="Line1"><br>
+            Line 2: <br><input type="text" size="30" id="Line2" name="Line2"><br>
+            Line 3: <br><input type="text" size="30" id="Line3" name="Line3"><br>
+            City: <br><input type="text" size="30" id="City" name="City"><br>
+            Province: <br><input type="text" size="30" id="Province" name="Province"><br>
+            Country: <br><input type="text" size="30" id="Country" name="Country"><br>
+            PostalCode: <br><input type="number" size="30" id="PostalCode" name="PostalCode">
+        </fieldset>
+      <input id="Create" type="submit" value="Create" />
+  </fieldset>
+</form>
